@@ -4,6 +4,7 @@ import CurrencyConvertor from "./Mini_Projects/CurrencyConvertor/CurrencyConvert
 import ReactRouterProject from "./Mini_Projects/ReactRouterProject/ReactRouterProject";
 import MiniContext from "./Mini_Projects/ContextApiProjects/01_miniContext/MiniContext";
 import StudentRegistration from "./Mini_Projects/ContextApiProjects/02_StudentRegistration/StudentRegistration";
+import ThemeSwitcher from "./Mini_Projects/ContextApiProjects/03_themeSwitcher/ThemeSwitcher";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <CurrencyConvertor /> */}
       {/* <ReactRouterProject /> */}
       {/* <MiniContext /> */}
-      <StudentRegistration />
+      {/* <StudentRegistration /> */}
+      <ThemeSwitcher />
     </>
   );
 }
