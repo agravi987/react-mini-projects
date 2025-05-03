@@ -11,23 +11,25 @@ function CurrencyConvertor() {
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
 
-  // Automatic conversion effect
   useEffect(() => {
     if (currencyInfo[to] && amount >= 0) {
       setConvertedAmount(amount * currencyInfo[to]);
     }
-  }, [amount, from, to, currencyInfo]); // Re-run when any of these change
+  }, [amount, from, to, currencyInfo]);
 
   const swap = () => {
     setFrom(to);
     setTo(from);
-    // No need to manually convert here - the useEffect will handle it
   };
 
   return (
-    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-[#6e5585]">
-      <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 bg-white/30">
-        <div className="w-full mb-1">
+    <div className="w-full min-h-screen flex flex-wrap justify-center items-center bg-gradient-to-br from-purple-700 via-indigo-800 to-purple-900">
+      <div className="w-full max-w-md mx-auto backdrop-blur-md border border-white/20 rounded-xl p-6 bg-white/20 shadow-lg">
+        <h1 className="text-white text-3xl font-bold mb-6 text-center">
+          💱 RisingSun Currency Converter
+        </h1>
+
+        <div className="w-full mb-3">
           <InputBox
             label="From"
             amount={amount}
@@ -37,16 +39,18 @@ function CurrencyConvertor() {
             onAmountChange={(amt) => setAmount(amt)}
           />
         </div>
-        <div className="relative w-full h-0.5">
+
+        <div className="relative w-full h-0.5 my-4">
           <button
             type="button"
-            className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+            className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-indigo-600 hover:bg-indigo-700 transition-all text-white font-medium px-4 py-1 rounded-full shadow-md"
             onClick={swap}
           >
-            swap
+            🔄 Swap
           </button>
         </div>
-        <div className="w-full mt-1 mb-4">
+
+        <div className="w-full mt-3">
           <InputBox
             label="To"
             amount={convertedAmount}
