@@ -141,8 +141,8 @@ Then open `http://localhost:5173/` in your browser.
 
 If you liked this project or found it helpful, connect with me on:
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/your-profile)
-- 💻 [Portfolio](https://your-portfolio.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/ravi-agrahari-9a653027a/))
+
 
 ---
 
